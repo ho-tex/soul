@@ -25,7 +25,7 @@ tdslocations={
 "tex/generic/soulutf8/soulutf8.sty",
 }
 
-checkconfigs = {"build","config-plain"}
+checkconfigs = {"build","config-pdftex"}
 
 function update_tag(file,content,tagname,tagdate)
 
