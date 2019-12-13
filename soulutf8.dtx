@@ -1,13 +1,13 @@
 % \iffalse meta-comment
 %
 % File: soulutf8.dtx
-% Version: 2016/05/16 v1.1
+% Version: 2019/12/15 v1.2
 % Info: Permit use of UTF-8 characters in soul
 %
 % Copyright (C)
 %    2007 Heiko Oberdiek
 %    2016-2019 Oberdiek Package Support Group
-%    https://github.com/ho-tex/oberdiek/issues
+%    https://github.com/ho-tex/soul/issues
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either
@@ -23,7 +23,7 @@
 %
 % The Current Maintainers of this work are
 % Heiko Oberdiek and the Oberdiek Package Support Group
-% https://github.com/ho-tex/oberdiek/issues
+% https://github.com/ho-tex/soul/issues
 %
 % The Base Interpreter refers to any `TeX-Format',
 % because some files are installed in TDS:tex/generic//.
@@ -35,8 +35,8 @@
 %    soulutf8-test4.tex, soulutf8-test5.tex.
 %
 % Distribution:
-%    CTAN:macros/latex/contrib/oberdiek/soulutf8.dtx
-%    CTAN:macros/latex/contrib/oberdiek/soulutf8.pdf
+%    CTAN:macros/latex/contrib/soulutf8/soulutf8.dtx
+%    CTAN:macros/latex/contrib/soulutf8/soulutf8.pdf
 %
 % Unpacking:
 %    (a) If soulutf8.ins is present:
@@ -65,9 +65,9 @@
 %       pdflatex soulutf8.dtx
 %
 % Installation:
-%    TDS:tex/generic/oberdiek/soulutf8.sty
-%    TDS:doc/latex/oberdiek/soulutf8.pdf
-%    TDS:source/latex/oberdiek/soulutf8.dtx
+%    TDS:tex/generic/soulutf8/soulutf8.sty
+%    TDS:doc/latex/soulutf8/soulutf8.pdf
+%    TDS:source/latex/soulutf8/soulutf8.dtx
 %
 %<*ignore>
 \begingroup
@@ -84,7 +84,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: soulutf8 2016/05/16 v1.1 Permit use of UTF-8 characters in soul (HO)}
+\Msg{* Package: soulutf8 2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -96,7 +96,7 @@
 This is a generated file.
 
 Project: soulutf8
-Version: 2016/05/16 v1.1
+Version: 2019/12/15 v1.2
 
 Copyright (C)
    2007 Heiko Oberdiek
@@ -116,7 +116,7 @@ This work has the LPPL maintenance status "maintained".
 
 The Current Maintainers of this work are
 Heiko Oberdiek and the Oberdiek Package Support Group
-https://github.com/ho-tex/oberdiek/issues
+https://github.com/ho-tex/soul/issues
 
 
 The Base Interpreter refers to any `TeX-Format',
@@ -134,14 +134,8 @@ and the derived files
 \generate{%
   \file{soulutf8.ins}{\from{soulutf8.dtx}{install}}%
   \file{soulutf8.drv}{\from{soulutf8.dtx}{driver}}%
-  \usedir{tex/generic/oberdiek}%
+  \usedir{tex/generic/soulutf8}%
   \file{soulutf8.sty}{\from{soulutf8.dtx}{package}}%
-%  \usedir{doc/latex/oberdiek/test}%
-%  \file{soulutf8-test1.tex}{\from{soulutf8.dtx}{test1}}%
-%  \file{soulutf8-test2.tex}{\from{soulutf8.dtx}{test2,utf8}}%
-%  \file{soulutf8-test3.tex}{\from{soulutf8.dtx}{test3,utf8x}}%
-%  \file{soulutf8-test4.tex}{\from{soulutf8.dtx}{test4,utf8,noetex}}%
-%  \file{soulutf8-test5.tex}{\from{soulutf8.dtx}{test5,utf8x,noetex}}%
 }
 
 \catcode32=13\relax% active space
@@ -168,7 +162,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{soulutf8.drv}%
-  [2016/05/16 v1.1 Permit use of UTF-8 characters in soul (HO)]%
+  [2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \begin{document}
@@ -182,9 +176,9 @@ and the derived files
 % \GetFileInfo{soulutf8.drv}
 %
 % \title{The \xpackage{soulutf8} package}
-% \date{2016/05/16 v1.1}
+% \date{2019/12/15 v1.2}
 % \author{Heiko Oberdiek\thanks
-% {Please report any issues at \url{https://github.com/ho-tex/oberdiek/issues}}}
+% {Please report any issues at \url{https://github.com/ho-tex/soul/issues}}}
 %
 % \maketitle
 %
@@ -332,7 +326,7 @@ and the derived files
   \fi
 \expandafter\x\csname ver@soulutf8.sty\endcsname
 \ProvidesPackage{soulutf8}%
-  [2016/05/16 v1.1 Permit use of UTF-8 characters in soul (HO)]%
+  [2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)]%
 %    \end{macrocode}
 %
 % \subsection{Catcodes}
@@ -475,8 +469,8 @@ and the derived files
   \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{soul}}%
   \ProcessOptions\relax
   \RequirePackage{soul}[2003/11/17]%
-  \RequirePackage{infwarerr}[2016/05/16]%
-  \RequirePackage{etexcmds}[2016/05/16]%
+  \RequirePackage{infwarerr}[2019/12/15]%
+  \RequirePackage{etexcmds}[2019/12/15]%
 \fi
 %    \end{macrocode}
 %
@@ -1111,8 +1105,8 @@ and the derived files
 % \paragraph{Package.} This package is available on
 % CTAN\footnote{\CTANpkg{soulutf8}}:
 % \begin{description}
-% \item[\CTAN{macros/latex/contrib/oberdiek/soulutf8.dtx}] The source file.
-% \item[\CTAN{macros/latex/contrib/oberdiek/soulutf8.pdf}] Documentation.
+% \item[\CTAN{macros/latex/contrib/soulutf8/soulutf8.dtx}] The source file.
+% \item[\CTAN{macros/latex/contrib/soulutf8/soulutf8.pdf}] Documentation.
 % \end{description}
 %
 %
@@ -1121,7 +1115,7 @@ and the derived files
 % the packages are already unpacked and the documentation files
 % are generated. The files and directories obey the TDS standard.
 % \begin{description}
-% \item[\CTANinstall{install/macros/latex/contrib/oberdiek.tds.zip}]
+% \item[\CTANinstall{install/macros/latex/contrib/soulutf8.tds.zip}]
 % \end{description}
 % \emph{TDS} refers to the standard ``A Directory Structure
 % for \TeX\ Files'' (\CTANpkg{tds}). Directories
@@ -1151,9 +1145,9 @@ and the derived files
 % \begin{quote}
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
-%   soulutf8.sty & tex/generic/oberdiek/soulutf8.sty\\
-%   soulutf8.pdf & doc/latex/oberdiek/soulutf8.pdf\\
-%   soulutf8.dtx & source/latex/oberdiek/soulutf8.dtx\\
+%   soulutf8.sty & tex/generic/soulutf8/soulutf8.sty\\
+%   soulutf8.pdf & doc/latex/soulutf8/soulutf8.pdf\\
+%   soulutf8.dtx & source/latex/soulutf8/soulutf8.dtx\\
 % \end{tabular}^^A
 % }^^A
 % \sbox0{\t}^^A
@@ -1289,6 +1283,10 @@ and the derived files
 %     First version.
 %   \end{Version}
 %   \begin{Version}{2016/05/16 v1.1}
+%   \item
+%     Documentation updates.
+%   \end{Version}
+%   \begin{Version}{2019/12/15 v1.2}
 %   \item
 %     Documentation updates.
 %   \end{Version}

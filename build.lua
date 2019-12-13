@@ -1,7 +1,7 @@
 #!/usr/bin/env texlua
 
 
-module = "ltxcmds"
+module = "soulutf8"
 
 installfiles = {
 '*.sty',
@@ -10,7 +10,7 @@ installfiles = {
 
 
 textfiles = {"README.md"}
-unpackfiles = {'ltxcmds.dtx'}
+unpackfiles = {'soulutf8.dtx'}
 
 packtdszip  = true
 
@@ -18,9 +18,9 @@ maxprintline=10000
 checkruns = 2
 
 tdslocations={
-"doc/latex/ltxcmds/ltxcmds.pdf",
-"source/latex/ltxcmds/ltxcmds.dtx",
-"tex/generic/ltxcmds/ltxcmds.sty",
+"doc/latex/soulutf8/soulutf8.pdf",
+"source/latex/soulutf8/soulutf8.dtx",
+"tex/generic/soulutf8/soulutf8.sty",
 }
 
 checkconfigs = {"build","config-plain"}
