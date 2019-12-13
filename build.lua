@@ -4,10 +4,12 @@
 module = "soulutf8"
 
 installfiles = {
-'*.sty',
-'*.dtx','*.pdf'
+'soulutf8.sty',
+'soulutf8.dtx','*.pdf'
 }
 
+sourcefiles={"soulutf8.dtx"}
+typesetfiles={"soulutf8.dtx"}
 
 textfiles = {"README.md"}
 unpackfiles = {'soulutf8.dtx'}
