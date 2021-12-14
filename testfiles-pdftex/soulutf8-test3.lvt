@@ -13,7 +13,7 @@
 \usepackage[unicode]{hyperref}
 \usepackage{bookmark}
 \usepackage{color}
-\usepackage{soul}[2003/11/17]
+\usepackage{soul-ori}[2003/11/17]
 \makeatletter
 \newcommand*{\@ifDefined}[1]{%
   \@ifundefined{#1}{%
@@ -48,7 +48,7 @@
 \SaveOrg{addmath}
 \SaveOrg{addprotect}
 \SaveOrg{addtoken}
-\usepackage{soulutf8}[2016/05/16]
+\usepackage{soul}[2016/05/16]
 \let\origshow\show
 \usepackage[utf8x]{inputenc}
 \AtBeginDocument{%

@@ -73,7 +73,7 @@
 }
 \def\space{ }
 \expandafter\ifx\csname LoadCommand\endcsname\relax
-  \def\LoadCommand{\input soulutf8.sty\relax}%
+  \def\LoadCommand{\input soul.sty\relax}%
 \fi
 \def\Test{%
   \RangeCatcodeInvalid{0}{47}%

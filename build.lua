@@ -1,28 +1,32 @@
 #!/usr/bin/env texlua
 
 
-module = "soulutf8"
+module = "soul"
 
 installfiles = {
-'soulutf8.sty',
-'soulutf8.dtx','*.pdf'
+'soul.sty',
+'soul-ori.sty',
+'soul.dtx',
+'soul-ori.dtx','*.pdf'
 }
 
-sourcefiles={"soulutf8.dtx"}
-typesetfiles={"soulutf8.dtx"}
+sourcefiles={"soul.dtx","soul-ori.dtx","soul.ins"}
+typesetfiles={"soul.dtx","soul-ori.dtx"}
 
 textfiles = {"README.md"}
-unpackfiles = {'soulutf8.dtx'}
+--unpackfiles = {'soul.dtx',"soul-ori.dtx"}
 
-packtdszip  = true
+--packtdszip  = true
 
 maxprintline=10000
 checkruns = 2
 
 tdslocations={
-"doc/latex/soulutf8/soulutf8.pdf",
-"source/latex/soulutf8/soulutf8.dtx",
-"tex/generic/soulutf8/soulutf8.sty",
+"doc/latex/soul/soul.pdf",
+"source/latex/soul/soul.dtx",
+"source/latex/soul/soul-ori.dtx",
+"tex/generic/soul/soul.sty",
+"tex/generic/soul/soul-ori.sty",
 }
 
 checkconfigs = {"build","config-pdftex"}

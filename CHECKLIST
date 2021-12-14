@@ -1,8 +1,0 @@
-- watch for FIXME and \marginpars
-- activate and specify checksum
-- set release date (both in doc and implementation)
-- set release version (both in doc and implementation)
-- ispell -t
-- fresh checkout and compile
-- tag RELEASE (cvs tag RELEASE_1_*)
-- set release state (cvs admin -sRel)
