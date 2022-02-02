@@ -2210,7 +2210,9 @@
 % This piece of code makes sure that the package is only loaded
 % once. While this is guaranteed by \LaTeX, we have to do it
 % manually for all other flavors of \TeX.
-%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
 %    \begin{macrocode}
 \expandafter\ifx\csname SOUL@\endcsname\relax\else
     \expandafter\endinput
@@ -4450,7 +4452,9 @@
 \endinput
 %    \end{macrocode}
 %
-%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
 %
 %
 %^^A--------------------------------------------------------------------
