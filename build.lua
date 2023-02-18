@@ -6,6 +6,7 @@ module = "soul"
 installfiles = {
 'soul.sty',
 'soul-ori.sty',
+'soulutf8.sty',
 'soul.dtx',
 'soul-ori.dtx','*.pdf'
 }
@@ -23,10 +24,12 @@ checkruns = 2
 
 tdslocations={
 "doc/latex/soul/soul.pdf",
+"doc/latex/soul/soul-ori.pdf",
 "source/latex/soul/soul.dtx",
 "source/latex/soul/soul-ori.dtx",
 "tex/generic/soul/soul.sty",
 "tex/generic/soul/soul-ori.sty",
+"tex/latex/soul/soulutf8.sty",
 }
 
 checkconfigs = {"build","config-pdftex"}

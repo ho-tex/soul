@@ -128,6 +128,18 @@
 % }
 %
 % \section{Implementation}
+%<*soulutf8>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{soulutf8}%
+  [2023-02-18 v1.3 Permit use of UTF-8 characters in soul (HO)]%
+\PackageWarning{soulutf8}
+     {This package is obsolete, use the soul package directly. 
+      \MessageBreak
+      }{}%
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{soul}}%
+\ProcessOptions\relax      
+\RequirePackage{soul}      
+%</soulutf8>
 %
 %    \begin{macrocode}
 %<*package>
