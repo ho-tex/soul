@@ -794,6 +794,7 @@
 %    \end{macro}
 %    \begin{macro}{\SOuL@remainingtoken}
 %    \begin{macrocode}
+\long\def\@gobble#1{}
 \def\SOuL@remainingtoken#1\SOUL@stop{%
   \global\SOUL@word=\expandafter{\@gobble#1}%
 }
