@@ -73,9 +73,7 @@
 %
 %
 %
-\ifx\makehyperref\SOULundefined
-\else   ^^A for "make hyper"
-    \usepackage{hyperref}
+\usepackage{hyperref}
     \hypersetup{
         bookmarksopen,
         colorlinks,
@@ -84,17 +82,15 @@
         pdfsubject={Version 2.5},
         pdfkeywords={space out, letterspacing, underlining, overstriking, highlighting}
     }
-    \usepackage[pdftex]{graphicx,color}
+    \usepackage{graphicx,color}
     \pdfstringdefDisableCommands{%
         \let\so\relax
         \let\caps\relax
         \let\ul\relax
         \let\st\relax
         \let\hl\relax
-        \def\soul{soul}
-        \def\TeX{TeX}
-    }
-\fi
+        \def\soul{soul}%
+        \def\TeX{TeX}}
 %
 %
 %
