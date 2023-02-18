@@ -1,12 +1,12 @@
 % \iffalse meta-comment
 %
 % File: soul.dtx
-% Version: 2019/12/15 v1.2
+% Version: 2023-02-18 v3.0
 % Info: Permit use of UTF-8 characters in soul
 %
 % Copyright (C)
 %    2007 Heiko Oberdiek
-%    2016-2019 Oberdiek Package Support Group
+%    2016-2023 Oberdiek Package Support Group
 %    https://github.com/ho-tex/soul/issues
 %
 % This work may be distributed and/or modified under the
@@ -30,7 +30,7 @@
 %
 % This work consists of the main source file soul.dtx
 % and the derived files
-%    soul.sty, soul.pdf, soul.ins,
+%    soul.sty, soul.pdf, soul.ins,soulutf8.sty
 %    soulutf8-test1.tex, soulutf8-test2.tex, soulutf8-test3.tex,
 %    soulutf8-test4.tex, soulutf8-test5.tex.
 %
@@ -50,7 +50,7 @@
 % \fi
 %
 % \title{The \xpackage{soul} package}
-% \date{2021/12/14 v3.0}
+% \date{2023-02-18 v3.0}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/soul/issues}}}
 %
@@ -131,7 +131,7 @@
 %<*soulutf8>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{soulutf8}%
-  [2023-02-18 v1.3 Permit use of UTF-8 characters in soul (HO)]%
+  [2023-02-18 v3.0 Permit use of UTF-8 characters in soul (HO)]%
 \PackageWarning{soulutf8}
      {This package is obsolete, use the soul package directly. 
       \MessageBreak
@@ -217,7 +217,7 @@
   \fi
 \expandafter\x\csname ver@soul.sty\endcsname
 \ProvidesPackage{soul}%
-  [2021/12/14 v3 Permit use of UTF-8 characters in soul (HO)]%
+  [2023-02-18 v3.0 Permit use of UTF-8 characters in soul (HO)]%
 %    \end{macrocode}
 %
 % \subsection{Catcodes}
@@ -359,7 +359,7 @@
 %    \begin{macrocode}
   \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{soul-ori}}%
   \ProcessOptions\relax
-  \RequirePackage{soul-ori}[2003/11/17]%
+  \RequirePackage{soul-ori}[2023-02-18]%
   \RequirePackage{infwarerr}[2019/12/03]%
   \RequirePackage{etexcmds}[2019/12/15]%
 \fi
@@ -990,7 +990,7 @@
 %    \begin{macrocode}
 %</package>
 %    \end{macrocode}
-%% \section{Installation}
+% \section{Installation}
 %
 % \subsection{Download}
 %
@@ -998,20 +998,15 @@
 % CTAN\footnote{\CTANpkg{soul}}:
 % \begin{description}
 % \item[\CTAN{macros/latex/contrib/soul/soul.dtx}] The source file.
+% \item[\CTAN{macros/latex/contrib/soul/soul-ori.dtx}] The source file.
 % \item[\CTAN{macros/latex/contrib/soul/soul.pdf}] Documentation.
 % \end{description}
 %
 %
-% \subsection{Bundle installation}
-%
-% \paragraph{Unpacking.} Unpack the \xfile{oberdiek.tds.zip} in the
-% TDS tree (also known as \xfile{texmf} tree) of your choice.
-% Example (linux):
-% \begin{quote}
-%   |unzip oberdiek.tds.zip -d ~/texmf|
-% \end{quote}
-%
 % \subsection{Package installation}
+% 
+%  Install the package with the package manager of your TeXsystem.
+%  If you want to do it manually:
 %
 % \paragraph{Unpacking.}
 % Run tex or \LaTeX{} on the \xfile{.ins} file
@@ -1025,9 +1020,13 @@
 % \begin{quote}
 % \def\t{^^A
 % \begin{tabular}{@{}>{\ttfamily}l@{ $\rightarrow$ }>{\ttfamily}l@{}}
-%   soulutf8.sty & tex/generic/soulutf8/soulutf8.sty\\
-%   soulutf8.pdf & doc/latex/soulutf8/soulutf8.pdf\\
-%   soulutf8.dtx & source/latex/soulutf8/soulutf8.dtx\\
+%   soul.sty & tex/generic/soul/soul.sty\\
+%   soul-ori.sty & tex/generic/soul/soul-ori.sty\\   
+%   soulutf8.sty & tex/latex/soul/soulutf8.sty\\      
+%   soul.pdf & doc/generic/soul/soul.pdf\\
+%   soul-ori.pdf & doc/generic/soul/soul-ori.pdf\\
+%   soul.dtx    & source/generic/soul/soul.dtx\\
+%   soulori.dtx & source/generic/soul/soul-ori.dtx\\
 % \end{tabular}^^A
 % }^^A
 % \sbox0{\t}^^A
@@ -1100,42 +1099,6 @@
 % these. For example, \TeX\,Live\ users run \verb|texhash| or
 % \verb|mktexlsr|.
 %
-% \subsection{Some details for the interested}
-%
-% \paragraph{Unpacking with \LaTeX.}
-% The \xfile{.dtx} chooses its action depending on the format:
-% \begin{description}
-% \item[\plainTeX:] Run \docstrip\ and extract the files.
-% \item[\LaTeX:] Generate the documentation.
-% \end{description}
-% If you insist on using \LaTeX\ for \docstrip\ (really,
-% \docstrip\ does not need \LaTeX), then inform the autodetect routine
-% about your intention:
-% \begin{quote}
-%   \verb|latex \let\install=y\input{soulutf8.dtx}|
-% \end{quote}
-% Do not forget to quote the argument according to the demands
-% of your shell.
-%
-% \paragraph{Generating the documentation.}
-% You can use both the \xfile{.dtx} or the \xfile{.drv} to generate
-% the documentation. The process can be configured by the
-% configuration file \xfile{ltxdoc.cfg}. For instance, put this
-% line into this file, if you want to have A4 as paper format:
-% \begin{quote}
-%   \verb|\PassOptionsToClass{a4paper}{article}|
-% \end{quote}
-% An example follows how to generate the
-% documentation with pdf\LaTeX:
-% \begin{quote}
-%\begin{verbatim}
-%pdflatex soulutf8.dtx
-%makeindex -s gind.ist soulutf8.idx
-%pdflatex soulutf8.dtx
-%makeindex -s gind.ist soulutf8.idx
-%pdflatex soulutf8.dtx
-%\end{verbatim}
-% \end{quote}
 %
 % \begin{thebibliography}{9}
 %
@@ -1169,6 +1132,9 @@
 %   \begin{Version}{2019/12/15 v1.2}
 %   \item
 %     Documentation updates.
+%   \end{Version}
+%   \begin{Version}{2023-02-18 v3.0}
+%   \item merged soulutf8 and the original soul into one package.
 %   \end{Version}
 % \end{History}
 %
