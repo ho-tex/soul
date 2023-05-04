@@ -1,0 +1,20 @@
+\input{regression-test}
+\documentclass{article}
+\usepackage{soul,color}
+
+\makeatletter
+\newskip\beamer@lastskip
+
+\def\reset@color{%
+  \beamer@lastskip=\lastskip%
+  \unskip
+  \pdfcolorstack\@pdfcolorstack pop\relax 
+  \hskip\beamer@lastskip%
+}
+
+\begin{document}
+\START \showoutput 
+
+xxxx\hl{abc}xxxx
+
+\end{document}

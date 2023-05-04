@@ -3884,7 +3884,7 @@
 % and the given material afterwards. This is needed for highlighting,
 % but gives less than optimal results for colored overstriking, which,
 % however, will hardly ever be used, anyway.
-%
+% \changes{v3.1}{2023/05/04}{added a kern after leaders to guard against an unskip, issue \#8}
 %    \begin{macrocode}
 \def\SOUL@ulunderline#1{{%
     \setbox\z@\hbox{#1}%
@@ -3894,7 +3894,7 @@
     \rlap{%
         \null
         \kern-\SOUL@dimeni
-        \SOUL@ulcolor{\SOUL@ulleaders\hskip\SOUL@dimen}%
+        \SOUL@ulcolor{\SOUL@ulleaders\hskip\SOUL@dimen\kern\z@}%
     }%
     \unhcopy\z@
 }}
@@ -3960,13 +3960,14 @@
 % The \cs{\null} prevents a nasty gap in |\textfrak| |{a \textswab{b}}|,
 % while it doesn't seem to hurt in all other cases. I didn't investigate
 % this.
-%
+% \changes{v3.1}{2023/05/04}{added a kern after leaders to guard against an unskip, issue \#8}
 %    \begin{macrocode}
 \def\SOUL@uleveryspace#1{%
     \SOUL@ulcolor{%
         #1%
         \SOUL@ulleaders
         \hskip\spaceskip
+        \kern\z@
     }%
     \null
 }
