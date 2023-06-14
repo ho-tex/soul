@@ -2,7 +2,7 @@
 
 soul package for latex and plain
 
-Version: 2023-02-18 v3.0
+Version: 2023-06-14 v3.1
 
 Provides hyphenable spacing out (letterspacing), underlining, striking out, etc., using the TEX hyphenation algorithm to find the proper hyphens automatically. The package also provides a mechanism that can be used to implement similar tasks, that have to treat text syllable by syllable. This is shown in two examples.
 
