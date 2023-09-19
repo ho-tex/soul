@@ -362,6 +362,24 @@
   \RequirePackage{soul-ori}[2023-02-18]%
   \RequirePackage{infwarerr}[2019/12/03]%
   \RequirePackage{etexcmds}[2019/12/15]%
+%    \end{macrocode}
+% To support \cs{(} and \cs{)}, see issue \# 6 and 
+% https://tex.stackexchange.com/a/426036/2388
+%    \begin{macrocode}
+  \RequirePackage{etl}
+\ExplSyntaxOn
+\cs_generate_variant:Nn \etl_token_replace_all_deep:nNn { e }
+\cs_set_eq:NN \SOUL_start:n \SOUL@start
+\cs_set_protected:Npn \SOUL@start #1
+ {
+  \exp_args:Ne \SOUL_start:n
+      {
+        \etl_token_replace_all_deep:eNn
+          { \etl_token_replace_all_deep:nNn {#1} \( { $ } }
+          \) { $ }
+      }
+ }
+\ExplSyntaxOff    
 \fi
 %    \end{macrocode}
 %

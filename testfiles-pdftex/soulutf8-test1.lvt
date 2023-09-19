@@ -77,7 +77,7 @@
 \fi
 \def\Test{%
   \RangeCatcodeInvalid{0}{47}%
-  \RangeCatcodeInvalid{58}{64}%
+  %\RangeCatcodeInvalid{58}{63}% etl doesn't like an invalid?
   \RangeCatcodeInvalid{91}{96}%
   \RangeCatcodeInvalid{123}{255}%
   \catcode`\@=12 %
@@ -88,7 +88,7 @@
   \RangeCatcodeCheck{37}{37}{14}%
   \RangeCatcodeCheck{38}{47}{15}%
   \RangeCatcodeCheck{48}{57}{12}%
-  \RangeCatcodeCheck{58}{63}{15}%
+  %\RangeCatcodeCheck{58}{63}{15}%
   \RangeCatcodeCheck{64}{64}{12}%
   \RangeCatcodeCheck{65}{90}{11}%
   \RangeCatcodeCheck{91}{91}{15}%

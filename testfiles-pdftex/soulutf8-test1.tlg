@@ -32,4 +32,6 @@ Package: infwarerr ....-..-.. v... Providing info/warning/error messages (HO)
 Package: etexcmds ....-..-.. v... Avoid name clashes with e-TeX commands (HO)
 (../iftex.sty
 Package: iftex ....-..-.. v... TeX engine tests
-)))
+)) (../etl.sty
+Package: etl ....-..-.. v... expandable token list manipulation
+))
