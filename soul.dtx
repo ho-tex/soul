@@ -105,10 +105,10 @@
 % \begin{itemize}
 % \item
 %   A problem with additional levels of curly braces is fixed.
-%   As advantage more implicite kernings are detected.
+%   As advantage more implicit kernings are detected.
 %   However, the result may be incompatible with the
 %   original behaviour of package \xpackage{soul-ori} because
-%   of these respected implicite kernings.
+%   of these respected implicit kernings.
 % \item
 %   \eTeX\ , especially \cs{unexpanded} is supported.
 %   This allows a better protection of token groups
@@ -779,7 +779,7 @@
 %    or token group from a word and redefines the word to contain
 %    the remaining tokens. However if the remaining tokens are
 %    a token group, then the curly braces will be removed and
-%    the token group is splitted by the next call of \cs{SOUL@splittoken}.
+%    the token group is split by the next call of \cs{SOUL@splittoken}.
 %    The redefinition avoids the removal of curly braces around the
 %    remaining tokens.
 %    \begin{macrocode}
@@ -805,7 +805,7 @@
 %
 %    The fixed \cs{SOUL@splittoken} allows to remove the double
 %    sets of curly braces in other macros of package \xpackage{soul-ori}.
-%    The benefit is that implicite kernings are more often detected
+%    The benefit is that implicit kernings are more often detected
 %    and fixes a bug in package \xpackage{soul-ori}. The disadvantage is
 %    incompatibility. The width of the resulting strings may change.
 %    \begin{macro}{\SOUL@flushcomma}
@@ -1005,7 +1005,7 @@
 %
 % \subsection{Package installation}
 % 
-%  Install the package with the package manager of your TeXsystem.
+%  Install the package with the package manager of your TeX system.
 %  If you want to do it manually:
 %
 % \paragraph{Unpacking.}
